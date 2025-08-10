@@ -1,5 +1,12 @@
 # Astrology Web
 
+## Live Demo
+
+You can view the live deployment of this project here:
+[Project Name Live](https://astrologer-website-d2zr.vercel.app/)
+
+
+
 This is my Astrology Web project.
 
 ## Screenshots
