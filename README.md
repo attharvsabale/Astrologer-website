@@ -3,7 +3,7 @@
 ## Live Demo
 
 You can view the live deployment of this project here:
-[Project Name Live](https://astrologer-website-d2zr.vercel.app/)
+[Live Project](https://astrologer-website-d2zr.vercel.app/)
 
 
 
