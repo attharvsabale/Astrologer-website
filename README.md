@@ -1,5 +1,5 @@
 # Astrology Web
-
+#Please Note: This project is currently optimized for desktop viewing only. Mobile responsiveness has not yet been implemented.
 ## Live Demo
 
 You can view the live deployment of this project here:
