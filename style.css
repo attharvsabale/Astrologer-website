@@ -335,29 +335,26 @@ nav {
 }
 
 #home2nd-right {
-    background-color: red; /* For visualization */
+    background-color: red;
     height: 40vh;
-    /* Adjust width to a more reasonable aspect ratio.
-       Using vw is generally better for width than vh for most screens.
-       Example: 60vw would be a common width for a video player. */
-    width: 70vw; /* Adjusted for better aspect ratio */
+    width: 70vw; 
     overflow: hidden;
     margin-right: 5vh;
     border-radius: 70px;
-    position: relative; /* Crucial for positioning content *over* the video */
-    display: flex; /* Make it a flex container to manage inner content */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 #home2nd-right video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This is correct for filling and cropping */
-    display: block; /* Ensures no extra space below the video */
+    object-fit: cover; 
+    display: block;
 }
 
-/* Styles for the text overlay */
+
 #home2nd-right .video-overlay-text {
     position: absolute;
     z-index: 1; 
@@ -450,19 +447,19 @@ nav {
 }
 
 .action-capsule a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent or set explicitly */
-    padding: 1.5vh 2.5vw; /* Apply padding here */
-    border-radius: 100px; /* Apply border-radius here */
-    font-size: 1.2vw; /* Apply font-size here */
+    text-decoration: none; 
+    color: inherit; 
+    padding: 1.5vh 2.5vw; 
+    border-radius: 100px; 
+    font-size: 1.2vw;
     cursor: pointer;
-    transition: all 0.3s ease; /* Apply transition here */
-    display: flex; /* Make the link a flex container */
-    align-items: center; /* Vertically align text and arrow */
-    gap: 0.5vw; /* Space between text and arrow */
+    transition: all 0.3s ease; 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5vw;
 }
 
-/* First Capsule (WhatsApp): Transparent with Border */
+
 .action-capsule:nth-child(1) a {
     background-color: transparent;
     border: 1px solid black;
@@ -474,7 +471,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/* Second Capsule (Book Appointment): Black Background */
+
 .action-capsule:nth-child(2) a {
     background-color: black;
     color: white;
@@ -492,7 +489,7 @@ nav {
     width: 100%;
     height: 40%;
     overflow: hidden;
-    background-color: #FBF8F1; /* A light background, adjust to your palette */
+    background-color: #F9F4EB;
     padding: 2vh 0;
     white-space: nowrap;
    border-top: 1px solid black;
@@ -504,27 +501,27 @@ nav {
 }
 
 .marquee-content {
-    display: inline-flex; /* Changed from inline-block to inline-flex to better align text and images */
-    align-items: center; /* Vertically align text and images */
+    display: inline-flex; 
+    align-items: center; 
     font-size: 4vw;
     color: black;
     font-weight: 600;
-    padding-right: 2vw; /* Space between repeated content blocks */
+    padding-right: 2vw; 
 }
 
 .marquee-content span {
-    margin-right: 0.8vw; /* Space between text and the icon */
-    display: inline-block; /* Keep as inline-block */
+    margin-right: 0.8vw; 
+    display: inline-block; 
 }
 
 .marquee-separator-icon {
-    width: 5.5vh; /* Size of the image, responsive to viewport height */
-    height: 5.5vh; /* Keep height same as width for square image */
-    object-fit: contain; /* Ensure the whole icon is visible, not cropped */
-    vertical-align: middle; /* Align with text baseline */
-    margin-right: 1.5vw; /* Space after the icon before the next text item */
-    border-radius: 50%; /* Optional: Make the icon background circular if it's a square image */
-    background-color: transparent; /* Optional: if you want a background for the icon */
+    width: 5.5vh;
+    height: 5.5vh; 
+    object-fit: contain; 
+    vertical-align: middle; 
+    margin-right: 1.5vw; 
+    border-radius: 50%; 
+    background-color: transparent; 
 }
 
 /* Keyframe animation: Always moves from 0% to -50% */
@@ -537,32 +534,14 @@ nav {
     }
 }
 
-/* Class to reverse the animation direction (makes it scroll right to left) */
+
 .marquee-container.reverse-scroll {
     animation-direction: reverse;
 }
 
-/* Optional: Pause animation on hover */
+
 .marquee-container:hover {
     animation-play-state: paused;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .marquee-content {
-        font-size: 4vw;
-    }
-    .marquee-content span {
-        margin-right: 1.5vw;
-    }
-    .marquee-separator-icon {
-        width: 3.5vh; /* Slightly larger on mobile for visibility */
-        height: 3.5vh;
-        margin-right: 3vw;
-    }
-    .marquee-container {
-        animation-duration: 20s;
-    }
 }
 
 
@@ -1227,5 +1206,401 @@ nav {
 
 
         }
+
+
+
+
+
+
+
+
+
+
+        /* MOBILE STYLING */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  #midNav {
+    display: none; /* hide normal nav */
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+    text-align: center;
+    margin: 2vh 0;
+    
+  }
+
+
+  #endNav button {
+    font-size: 3.5vw;
+    padding: 1vh 3vw;
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+  #home1st {
+    flex-direction: column-reverse;
+    height: auto;
+    text-align: center;
+    gap: 1vh;
+  }
+
+ 
+  #home1st-right {
+    width: 100%;
+    padding: 0;
+  }
+
+
+  #home1st-left
+ {
+    width: 40vw;
+    height: 15vh;
+    padding-left: 2vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+  #home1st-left-img {
+    width: 12vw;
+    height: 18vw;
+    overflow: hidden;
+    position: relative;
+    border-radius: 100px;
+}
+
+
+#home1st-left-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+  #home1st-right h1 {
+    font-size: 8vw;
+    text-align: center;
+
+  }
+
+  #home2nd {
+    flex-direction: column;
+    height: auto;
+    gap: 2vh;
+  }
+
+  #home2nd-left {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 30px;
+    height: auto;
+  }
+
+  #home2nd-left-mini-Imgs {
+    width: 19vh;
+    height: 5vh;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#home2nd-left-mini-Imgs-text {
+    margin-top: 24%;
+    text-align: center;
+}
+
+#home2nd-left-mini-Imgs-text p{
+    font-size: 2.5vh;
+        margin-bottom: 4vh;
+}
+
+#home2nd-left-mini-Imgs-text span{
+    font-size: 4vh;
+}
+
+  #home2nd-right {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+
+  #home2nd-right .video-overlay-text {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 3.5vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+    left: 0;
+    top: 0;
+    margin-top: 2vh;
+    margin-left: 3vh;
+    width: 50%;
+}
+
+.video-control-button {
+    font-size: 2em;
+}
+
+  #home3rd {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 2vh;
+    padding: 2vh 0;
+  }
+
+  #home3rd-1-img {
+    margin-left: 5.2vh;
+    height: 6vh;
+    width: 6vh;
+}
+
+  #home3rd-2 {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0;
+    background-color: rgb(245, 166, 110);
+  }
+
+  .action-capsule a {
+    font-size: 4vw;
+    padding: 1.5vh 5vw;
+  }
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .marquee-content {
+        font-size: 4vw;
+    }
+    .marquee-content span {
+        margin-right: 1.5vw;
+    }
+    .marquee-separator-icon {
+        width: 3.5vh; /* Slightly larger on mobile for visibility */
+        height: 3.5vh;
+        margin-right: 3vw;
+    }
+    .marquee-container {
+        animation-duration: 20s;
+    }
+}
+
+
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* HERO CARDS */
+  .hero-cards {
+    position: static;    
+    transform: none;
+    width: 100%;
+    height: 40%;
+    margin: 2rem auto;
+    flex-direction: row; 
+    gap: 1.5rem;
+  }
+
+  .hero-cards .card {
+    aspect-ratio: auto;
+    width: 100%;
+  }
+
+  /* ABOUT SECTION */
+  .about-top-content {
+    flex-direction: column-reverse;  /* stack text above image */
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #about-div h1 {
+    margin: 4rem 0 0rem 0;   /* remove big margins */
+    font-size:7vh;
+    height: 44vh;
+    line-height: 12rem;
+  }
+
+  #about-container {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 0;
+    margin-right: -10vh;
+  }
+
+  #about-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin-left: 30%;
+}
+
+  #about-div2 {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: justify;
+  }
+
+  #about-div2 p {
+    width: 100%;  /* full width */
+    word-spacing: -4px;
+  }
+
+  .services {
+    padding: 0rem 0rem;
+}
+
+  .services-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transform: translateY(400%);
+    will-change: transform;
+    margin-top: -5vh;
+
+}
+
+.services-header h1 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+
+  .cards {
+    position: fixed;
+    top: 0vh;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+    background-color: var(--light);
+}
+
+.cards-container {
+    position: relative;
+    width: 100%;
+    height: 95%;
+    flex-direction: column;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.card-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title span{
+    font-size: 2rem;
+}
+
+.card-copy p {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    background-color: var(--light2);
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+
+
+.numbers-firstdiv {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    gap: 1.5vh;
+}
+
+.numbers-firstdiv p {
+    text-align: justify;
+    font-size: 2.2rem;
+    margin-left: -24px;
+    font-weight: lighter;
+    width: 90%;
+    letter-spacing: 0.3px;
+}
+
+.numbers-firstdiv h3 {
+    font-size: 6rem;
+    font-weight: 500;
+    width: 100%;
+    padding-left: 0%;
+    text-align: center;
+}
+
+.numbers-shape-box {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+
+}
+
+    #stat-industries {
+        bottom: 56%;
+        left: 14%;
+    }
+
+    #stat-turnaround {
+        bottom: 56%;
+        left: 34%;
+    }
+
+    #stat-satisfaction {
+        bottom: 56%;
+        left: 56%;
+    }
+
+    #stat-clients {
+        top: 8%;
+        right: 12%;
+    }
+
+}
+
+
+
+
+
+
+
 
 
